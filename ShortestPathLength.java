@@ -4,7 +4,6 @@ import java.util.*;
 
 //This class finds the length of the shortest path for a graph
 public class ShortestPathLength extends BreadthFirstSearch {
-	private ArrayList<Edge> tree = new ArrayList<Edge>();
 	private HashMap<Vertex, Integer> levels = new HashMap<Vertex, Integer>();
 	private Vertex startingVertex;
 
@@ -13,7 +12,6 @@ public class ShortestPathLength extends BreadthFirstSearch {
 	}
 
 	protected void processEdge(Edge e) {
-		tree.add(e);
 		Vertex u = e.u;
 		Vertex v = e.v;
 		if (u == startingVertex) {
@@ -36,12 +34,11 @@ public class ShortestPathLength extends BreadthFirstSearch {
 
 	public int computeShortestLength(Vertex u, Vertex v) {
 		startingVertex = u;
+
 		levels.put(startingVertex, 0);
+
 		start(startingVertex);
 
-		System.out.println(tree);
-
-		// return new Graph(tree);
 		return levels.get(v);
 	}
 

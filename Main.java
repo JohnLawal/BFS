@@ -46,6 +46,7 @@ public class Main {
 		list.add(new Edge("A","C"));
 		list.add(new Edge("C","D"));
 		
+		
 		Graph cg = new Graph(list);
 		Vertex start = new Vertex("A");
 		Vertex end = new Vertex("D");
