@@ -50,6 +50,7 @@ public abstract class AbstractGraphSearch {
 			additionalProcessing();
 		} while(someVertexUnvisited());
 	}
+	
 	protected abstract boolean hasBeenVisited(Vertex v);
 	protected abstract boolean someVertexUnvisited();
 	protected abstract void handleInitialVertex();

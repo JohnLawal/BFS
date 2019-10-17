@@ -87,12 +87,8 @@ public class Graph {
 
 	// TO-DO
 	int shortestPathLength(Vertex u, Vertex v) {
-		// if (hasPathBetween(u, v)) { // commented because we are assuming G is connected
 		ShortestPathLength shortestPL = new ShortestPathLength(this);
-		return shortestPL.computeShortestLength(u, v);
-		// } else {
-		// return -1;
-		// }
+		return shortestPL.computeShortestLength(u, v);		
 	}
 
 	/**

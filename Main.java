@@ -16,40 +16,40 @@ public class Main {
 		l.add(new Edge("C", "D"));
 		l.add(new Edge("F", "E"));
 
-		Graph g = new Graph(l);
-		String s = g.toString();
-		System.out.println("The main graph:\n " + s);
-		System.out.println("Are B and C adjacent? " + g.areAdjacent(new Vertex("B"), new Vertex("C")));
-		System.out.println("Are A and C adjacent? " + g.areAdjacent(new Vertex("A"), new Vertex("C")));
-		System.out.println("Are A and D adjacent? " + g.areAdjacent(new Vertex("A"), new Vertex("D")));
-		System.out.println("The spanning tree/forest:");
-		Graph t = g.getSpanningTree();
-		System.out.println(t);
+		// Graph g = new Graph(l);
+		// String s = g.toString();
+		// System.out.println("The main graph:\n " + s);
+		// System.out.println("Are B and C adjacent? " + g.areAdjacent(new Vertex("B"), new Vertex("C")));
+		// System.out.println("Are A and C adjacent? " + g.areAdjacent(new Vertex("A"), new Vertex("C")));
+		// System.out.println("Are A and D adjacent? " + g.areAdjacent(new Vertex("A"), new Vertex("D")));
+		// System.out.println("The spanning tree/forest:");
+		// Graph t = g.getSpanningTree();
+		// System.out.println(t);
 
-		System.out.println("Is the graph connected?");
-		System.out.println(g.isConnected());
-		System.out.println("How many connected components does the graph have?");
-		System.out.println(g.getComponentsCount());
+		// System.out.println("Is the graph connected?");
+		// System.out.println(g.isConnected());
+		// System.out.println("How many connected components does the graph have?");
+		// System.out.println(g.getComponentsCount());
 
+		// //
+		// System.out.println("Does the graph have cycle?");
+		// System.out.println(g.containsCycle());
+		// //
+		// System.out.println("Is there a path?");
+		// System.out.println(g.hasPathBetween(new Vertex("A"), new Vertex("F")));
+		// System.out.println(g.hasPathBetween(new Vertex("A"), new Vertex("D")));
 		//
-		System.out.println("Does the graph have cycle?");
-		System.out.println(g.containsCycle());
-		//
-		System.out.println("Is there a path?");
-		System.out.println(g.hasPathBetween(new Vertex("A"), new Vertex("F")));
-		System.out.println(g.hasPathBetween(new Vertex("A"), new Vertex("D")));
-		//
-		// //Note: Shortest Path Alg assumes G is connected
-		// List<Edge> list = new ArrayList<Edge>();
-		// list.add(new Edge("A","B"));
-		// list.add(new Edge("B","C"));
-		// list.add(new Edge("A","C"));
-		// list.add(new Edge("C","D"));
-		//
-		// Graph cg = new Graph(list);
-		// Vertex start = new Vertex("A");
-		// Vertex end = new Vertex("D");
-		// System.out.println("Shortest Path/Shortest Path Length:");
-		// System.out.println(g.shortestPathLength(start, end));
+		//Note: Shortest Path Alg assumes G is connected
+		List<Edge> list = new ArrayList<Edge>();
+		list.add(new Edge("A","B"));
+		list.add(new Edge("B","C"));
+		list.add(new Edge("A","C"));
+		list.add(new Edge("C","D"));
+		
+		Graph cg = new Graph(list);
+		Vertex start = new Vertex("A");
+		Vertex end = new Vertex("D");
+		System.out.println("Shortest Path/Shortest Path Length:");
+		System.out.println(cg.shortestPathLength(start, end));
 	}
 }
