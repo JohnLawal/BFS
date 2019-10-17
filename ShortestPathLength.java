@@ -18,7 +18,7 @@ public class ShortestPathLength extends BreadthFirstSearch {
 			// v is in level 1
 			levels.put(v, 1);
 		} else if (v == startingVertex) {
-			// v is in level 1
+			// u is in level 1
 			levels.put(u, 1);
 		} else {
 			// we're in deeper levels.
